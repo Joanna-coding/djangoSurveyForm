@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Dojo Survey's Result</title>
+    </head>
+    <body>
+        <div>
+           
+            <h1>Dojo Survey's Result</h1>
+            <p>your name:{{request.session.name}} </p>
+            <p>your location:{{request.session.location}} </p>
+            <p>your language:{{request.session.language}} </p>
+            <p>your comment:{{request.session.text}} </p>
+            
+            <form  action="/goBack" method="post">
+                {% csrf_token %}
+                <a class='btn btn-secondary' href="/">go back</a>
+            </form>
+        </div>
+    </body>
+</html>
